@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
 import androidx.compose.ui.tooling.preview.Preview
-
+import androidx.navigation.compose.rememberNavController
 
 
 @Composable
@@ -55,6 +55,8 @@ fun SignUpScreen(navController: NavController, auth: FirebaseAuth) {
             Text(text = errorMessage, color = Color.Red)
         }
     }
+
+
 }
 
 private fun signUp(email: String, password: String, auth: FirebaseAuth, onResult: (Boolean, String?) -> Unit) {
