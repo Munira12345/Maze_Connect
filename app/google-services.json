@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "865859258260",
+    "project_id": "mazeconnect-ae78e",
+    "storage_bucket": "mazeconnect-ae78e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865859258260:android:62731ce17bac34cc52f181",
+        "android_client_info": {
+          "package_name": "com.example.mazeconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6ifdc1fBHxhcaw4_rarIJLAaJtDGbecU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

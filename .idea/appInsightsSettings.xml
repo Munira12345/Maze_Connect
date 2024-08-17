@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.mazeconnect" />
+                  <option name="mobileSdkAppId" value="1:865859258260:android:62731ce17bac34cc52f181" />
+                  <option name="projectId" value="mazeconnect-ae78e" />
+                  <option name="projectNumber" value="865859258260" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
