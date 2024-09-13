@@ -3,6 +3,8 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
@@ -39,7 +41,7 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
             onValueChange = { password = it },             //updates the states when the text field value changes.
             label = { Text("Password") },
             modifier = Modifier.fillMaxWidth(),
-         //   visualTransformation = PasswordVisualTransformation()
+            visualTransformation = PasswordVisualTransformation()
         )
 
         // spacer A composable used to create space between components
@@ -60,7 +62,7 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
             Text("Sign In")
         }
         if (errorMessage.isNotEmpty()) {
-            //Text(text = errorMessage, color = Color.Red)
+            Text(text = errorMessage, color = Color.Red)
         }
     }
 }
@@ -84,7 +86,7 @@ private fun signIn(email: String, password: String, auth: FirebaseAuth, onResult
 @Preview(showBackground = true)
 @Composable
 fun SignInScreenPreview() {
-   val navController = rememberNavController()
+    val navController = rememberNavController()
     val auth = FirebaseAuth.getInstance()
-    SignUpScreen(navController, auth)
+    SignInScreen(navController, auth)
 }

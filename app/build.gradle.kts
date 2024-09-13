@@ -71,6 +71,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation ("io.insert-koin:koin-android:3.4.0")
+    implementation ("io.insert-koin:koin-androidx-compose:3.4.0")
 
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
     implementation("com.google.firebase:firebase-auth-ktx:21.0.1")

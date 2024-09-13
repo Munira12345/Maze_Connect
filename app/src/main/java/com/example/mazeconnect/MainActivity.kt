@@ -16,20 +16,22 @@ import com.example.mazeconnect.ui.theme.MazeConnectTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // add the windowcompact.setDecorFitsystemWindows(window, false)
+        // firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         enableEdgeToEdge()
         setContent {
             MazeConnectTheme {
+                //val viewmodel: MazeViewModel = koinViewModel()
+                // MyApplication(viewmodel.current)
                 MazeConnectApp()
                 }
-
-
             }
         }
     }
 
 
 @Composable
-fun MazeConnectApp() {
+fun MazeConnectApp() {// research if this should be in separate .kt file with diff feature graph() s
     MazeConnectTheme {
         NavGraph()
     }
