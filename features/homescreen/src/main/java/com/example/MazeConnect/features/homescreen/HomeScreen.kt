@@ -22,7 +22,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.MazeConnect.features.homescreen.R
+import com.google.firebase.auth.FirebaseAuth
+
 @Composable
 fun HomeScreen() {
     // Define the state for the search bar
@@ -171,4 +174,5 @@ fun BottomNavigationBar() {
 fun HomeScreenPreview() {
     HomeScreen() // Call the actual HomeScreen composable here
 }
-}
+
+
