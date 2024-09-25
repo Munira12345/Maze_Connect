@@ -1,11 +1,11 @@
-// package com.example.MazeConnect.features.homescreen
+package com.example.MazeConnect.features.homescreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.BottomNavigationBar
+// import androidx.compose.material.BottomNavigationBar
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
@@ -23,17 +23,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.MazeConnect.features.homescreen.R
-
-
 @Composable
 fun HomeScreen() {
+    // Define the state for the search bar
+    var searchQuery by remember { mutableStateOf("") }
+
     Scaffold(
         bottomBar = { BottomNavigationBar() }
-    ) {
+    ) { paddingValues ->  // Add paddingValues to apply content padding
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
+                .padding(paddingValues)  // Apply the scaffold content padding here
+                .padding(16.dp) // Additional padding for internal content
         ) {
             Text(
                 text = "Explore",
@@ -44,8 +46,8 @@ fun HomeScreen() {
 
             // Search Bar
             OutlinedTextField(
-                value = "",
-                onValueChange = {},
+                value = searchQuery, // Use the state value here
+                onValueChange = { searchQuery = it }, // Update the state
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp),
@@ -94,7 +96,6 @@ fun HomeScreen() {
                 EventCard(title = "Tech Talk", location = "Nymo County")
                 EventCard(title = "Workshop", location = "Phylo Labs")
             }
-
         }
     }
 }
@@ -113,7 +114,7 @@ fun EventCard(title: String, location: String) {
             verticalArrangement = Arrangement.Center
         ) {
             Image(
-                painter = painterResource(id = R.drawable.event_image), // Replace with your event image
+                painter = painterResource(id = R.drawable.event_image),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
@@ -149,6 +150,7 @@ fun BottomNavigationBar() {
             label = { Text("Home") },
             icon = { Icon(Icons.Default.Home, contentDescription = null) }
         )
+
         BottomNavigationItem(
             selected = false,
             onClick = {},
@@ -163,8 +165,10 @@ fun BottomNavigationBar() {
         )
     }
 }
+
 @Preview(showBackground = true)
 @Composable
-fun  HomeScreenPreview() {
-
+fun HomeScreenPreview() {
+    HomeScreen() // Call the actual HomeScreen composable here
+}
 }
