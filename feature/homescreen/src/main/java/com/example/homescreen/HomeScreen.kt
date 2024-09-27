@@ -42,6 +42,7 @@ fun HomeScreen() {
             Text(
                // text = "Explore",
                 text = stringResource(id = R.string.explore),
+
                 style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.Bold)
             )
 
