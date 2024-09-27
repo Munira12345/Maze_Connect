@@ -40,7 +40,7 @@ fun HomeScreen() {
                 .padding(16.dp) // Additional padding for internal content
         ) {
             Text(
-                //text = "Explore",
+               // text = "Explore",
                 text = stringResource(id = R.string.explore),
                 style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.Bold)
             )
