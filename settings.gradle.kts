@@ -21,5 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Maze Connect"
 include(":app")
-include(":features")
-include(":features:homescreen")
+include(":feature:homescreen")
