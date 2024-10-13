@@ -154,13 +154,15 @@ fun BottomNavigationBar() {
             label = { Text("Home") },
             icon = { Icon(Icons.Default.Home, contentDescription = null) }
         )
-
+/*
         BottomNavigationItem(
             selected = false,
             onClick = {},
             label = { Text("Events") },
             icon = { Icon(Icons.Default.CalendarToday, contentDescription = null) }
         )
+
+ */
         BottomNavigationItem(
             selected = false,
             onClick = {},

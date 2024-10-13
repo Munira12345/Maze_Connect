@@ -43,7 +43,7 @@ fun SignUpScreen(navController: NavController, auth: FirebaseAuth) {
         Button(onClick = {
             signUp(email, password, auth) { success, error ->
                 if (success) {
-                    navController.navigate("main")
+                    navController.navigate("sign_in")
                 } else {
                     errorMessage = error ?: "Sign-up failed"
                 }
