@@ -19,7 +19,7 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var errorMessage by remember { mutableStateOf("") }
-    var isSignInSuccessful by remember { mutableStateOf(false) }
+  /*  var isSignInSuccessful by remember { mutableStateOf(false) }
 
 
     if (isSignInSuccessful) {
@@ -29,9 +29,8 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
             }
         }
     }
-
-    // layout that places the children in a vertical sequence
-    Column(
+*/
+       Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
@@ -57,8 +56,8 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
         Button(onClick = {
             signIn(email, password, auth) { success, error ->
                 if (success) {
-                    isSignInSuccessful = true
-                    //navController.navigate("HomeScreen")
+                   // isSignInSuccessful = true
+                    navController.navigate("Home")
                 } else {
                     errorMessage = error ?: "Sign-in failed"
                 }

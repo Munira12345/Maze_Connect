@@ -7,7 +7,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.homescreen.HomeScreen
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
@@ -29,9 +28,10 @@ fun NavGraph(startDestination: String = "sign_up") {
           //  composable("main") {
             //MainScreen()
         //}
-        composable("HomeScreen") {
-            HomeScreen()
-        }
+              composable(" Home") {
+              Home()
+          }
+
         // composable functions here as I create new screens
     }
 }

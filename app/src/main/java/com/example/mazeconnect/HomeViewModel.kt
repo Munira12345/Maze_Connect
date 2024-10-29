@@ -1,6 +1,6 @@
-package com.example.homescreen
+package com.example.mazeconnect
 import androidx.lifecycle.ViewModel
-
-class HomeScreenViewModel : ViewModel() {
+class HomeViewModel: ViewModel() {
     // TODO: Add properties and functions related to HomeScreen data and logic
 }
+

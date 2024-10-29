@@ -1,4 +1,4 @@
-package com.example.homescreen
+package com.example.mazeconnect
 
 
 import androidx.compose.foundation.Image
@@ -26,7 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 
 @Composable
-fun HomeScreen() {
+fun Home() {
     // Define the state for the search bar
     var searchQuery by remember { mutableStateOf("") }
 
@@ -40,7 +40,7 @@ fun HomeScreen() {
                 .padding(16.dp) // Additional padding for internal content
         ) {
             Text(
-               // text = "Explore",
+                // text = "Explore",
                 text = stringResource(id = R.string.explore),
 
                 style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.Bold)
@@ -154,15 +154,15 @@ fun BottomNavigationBar() {
             label = { Text("Home") },
             icon = { Icon(Icons.Default.Home, contentDescription = null) }
         )
-/*
-        BottomNavigationItem(
-            selected = false,
-            onClick = {},
-            label = { Text("Events") },
-            icon = { Icon(Icons.Default.CalendarToday, contentDescription = null) }
-        )
+        /*
+                BottomNavigationItem(
+                    selected = false,
+                    onClick = {},
+                    label = { Text("Events") },
+                    icon = { Icon(Icons.Default.CalendarToday, contentDescription = null) }
+                )
 
- */
+         */
         BottomNavigationItem(
             selected = false,
             onClick = {},
@@ -175,6 +175,5 @@ fun BottomNavigationBar() {
 @Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview() {
-    HomeScreen() // Call the actual HomeScreen composable here
+    Home() // Call the actual HomeScreen composable here
 }
-
