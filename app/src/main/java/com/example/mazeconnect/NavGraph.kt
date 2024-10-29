@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.homescreen.HomeScreen
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
@@ -16,7 +17,7 @@ fun NavGraph(startDestination: String = "sign_up") {
 
 
     //nav host A composable that provides a container for navigation within the app.
-    NavHost(navController = navController, startDestination = startDestination) {
+      NavHost(navController = navController, startDestination = startDestination) {
         composable("sign_up") {
             SignUpScreen(navController, auth)
         }
@@ -25,8 +26,11 @@ fun NavGraph(startDestination: String = "sign_up") {
             SignInScreen(navController, auth)
 
         }
-            composable("main") {
-            MainScreen()
+          //  composable("main") {
+            //MainScreen()
+        //}
+        composable("HomeScreen") {
+            HomeScreen()
         }
         // composable functions here as I create new screens
     }
