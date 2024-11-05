@@ -1,3 +1,4 @@
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -54,6 +55,17 @@ fun SignUpScreen(navController: NavController, auth: FirebaseAuth) {
         if (errorMessage.isNotEmpty()) {
             Text(text = errorMessage, color = Color.Red)
         }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        // "Or Sign In" text with navigation action
+        Text(
+            text = "Or Sign In",
+            color = Color.Blue,
+            modifier = Modifier.clickable {
+                navController.navigate("sign_in")
+            }
+        )
     }
 
 

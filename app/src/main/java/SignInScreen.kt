@@ -1,3 +1,4 @@
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -11,26 +12,14 @@ import com.google.firebase.auth.FirebaseAuth
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 
-// composable building block for UI
+
 @Composable
 fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
-
-    // this are state values which will be monitored.
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var errorMessage by remember { mutableStateOf("") }
-  /*  var isSignInSuccessful by remember { mutableStateOf(false) }
 
-
-    if (isSignInSuccessful) {
-        LaunchedEffect(Unit) {
-            navController.navigate("HomeScreen") {
-                popUpTo("sign_in") { inclusive = true } // Clear back stack if needed
-            }
-        }
-    }
-*/
-       Column(
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
@@ -56,27 +45,31 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
         Button(onClick = {
             signIn(email, password, auth) { success, error ->
                 if (success) {
-                   // isSignInSuccessful = true
                     navController.navigate("Home")
                 } else {
                     errorMessage = error ?: "Sign-in failed"
                 }
             }
-        })
-        //onclick It calls the signIn function and navigates to the "main" screen if successful,
-        // otherwise sets an error message.
-
-        {
+        }) {
             Text("Sign In")
         }
         if (errorMessage.isNotEmpty()) {
             Text(text = errorMessage, color = Color.Red)
         }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        // Add the "Or Sign Up" text
+        Text(
+            text = "Or Sign Up",
+            color = Color.Blue,
+            modifier = Modifier.clickable {
+                navController.navigate("sign_up")
+            }
+        )
     }
 }
 
-// we define the sign in function that the button will call
-// first we have an instance of Firebase Authentication.
 private fun signIn(email: String, password: String, auth: FirebaseAuth, onResult: (Boolean, String?) -> Unit) {
     auth.signInWithEmailAndPassword(email, password)
         .addOnCompleteListener { task ->
@@ -86,8 +79,6 @@ private fun signIn(email: String, password: String, auth: FirebaseAuth, onResult
                 onResult(false, task.exception?.message)
             }
         }
-
-
 }
 
 @Preview(showBackground = true)
