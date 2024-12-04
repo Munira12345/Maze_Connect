@@ -59,7 +59,7 @@ fun SignInScreen(navController: NavController, auth: FirebaseAuth) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Add the "Or Sign Up" text
+        // Add the "Or Sign Up" text well
         Text(
             text = "Or Sign Up",
             color = Color.Blue,

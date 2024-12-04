@@ -59,6 +59,7 @@ fun SignUpScreen(navController: NavController, auth: FirebaseAuth) {
         Spacer(modifier = Modifier.height(8.dp))
 
         // "Or Sign In" text with navigation action
+        // confirm works first
         Text(
             text = "Or Sign In",
             color = Color.Blue,
