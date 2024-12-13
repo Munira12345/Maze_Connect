@@ -54,6 +54,8 @@ fun SignUpScreen(navController: NavController, auth: FirebaseAuth) {
         }
         if (errorMessage.isNotEmpty()) {
             Text(text = errorMessage, color = Color.Red)
+
+
         }
 
         Spacer(modifier = Modifier.height(8.dp))
