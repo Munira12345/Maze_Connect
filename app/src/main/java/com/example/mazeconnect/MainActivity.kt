@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MazeConnectTheme {
+
                 //val viewmodel: MazeViewModel = koinViewModel()
                 // MyApplication(viewmodel.current)
                 MazeConnectApp()
