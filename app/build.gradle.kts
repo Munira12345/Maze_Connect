@@ -70,53 +70,53 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation ("com.google.firebase:firebase-analytics-ktx")
-    implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation(libs.firebase.bom)
+    implementation(libs.firebase.analytics)
+    implementation (libs.firebase.analytics.ktx)
+    implementation (libs.firebase.auth.ktx)
 
-    implementation ("io.insert-koin:koin-android:3.4.0")
-    implementation ("io.insert-koin:koin-androidx-compose:3.4.0")
+    implementation (libs.koin.android)
+    implementation (libs.koin.androidx.compose)
 
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
-    implementation("com.google.firebase:firebase-auth-ktx:21.0.1")
-
-
-    implementation("androidx.core:core-ktx:1.10.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(libs.androidx.navigation.compose.v240alpha10)
+    implementation(libs.google.firebase.auth.ktx)
 
 
-        implementation("androidx.compose.ui:ui:1.5.0")
-        implementation("androidx.compose.material:material:1.5.0")
-        implementation("androidx.compose.ui:ui-tooling-preview:1.5.0")
-        debugImplementation("androidx.compose.ui:ui-tooling:1.5.0")
-        implementation("androidx.activity:activity-compose:1.8.0")
-
-        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-        implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation(libs.androidx.core.ktx.v1150)
+    implementation(libs.androidx.appcompat.v161)
+    implementation(libs.material.v190)
+    implementation(libs.androidx.constraintlayout)
 
 
-        implementation("androidx.navigation:navigation-compose:2.7.1")
+        implementation(libs.ui)
+        implementation(libs.androidx.material)
+        implementation(libs.ui.tooling.preview)
+        debugImplementation(libs.ui.tooling)
+        implementation(libs.androidx.activity.compose.v193)
 
-        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
-
-
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-
-        implementation("com.google.dagger:hilt-android:2.47")
-
-        implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
+        implementation(libs.androidx.lifecycle.runtime.ktx.v287)
+        implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
 
-            implementation("com.squareup.retrofit2:retrofit:2.9.0")
-            implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+        implementation(libs.navigation.compose)
 
-        implementation("androidx.room:room-runtime:2.5.2")
+        implementation(libs.androidx.lifecycle.livedata.ktx)
+
+
+        implementation(libs.kotlinx.coroutines.core)
+        implementation(libs.kotlinx.coroutines.android)
+
+        implementation(libs.hilt.android)
+
+        implementation(libs.androidx.hilt.navigation.compose)
+
+
+            implementation(libs.retrofit)
+            implementation(libs.converter.gson)
+
+        implementation(libs.androidx.room.runtime)
     
-        implementation("androidx.room:room-ktx:2.5.2")
+        implementation(libs.androidx.room.ktx)
 
 
 
