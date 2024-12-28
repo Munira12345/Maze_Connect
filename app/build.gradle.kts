@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
+
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
@@ -79,8 +80,6 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
     implementation("com.google.firebase:firebase-auth-ktx:21.0.1")
-        implementation(platform("com.google.firebase:firebase-bom:29.0.3"))
-
 
 
     implementation("androidx.core:core-ktx:1.10.1")
